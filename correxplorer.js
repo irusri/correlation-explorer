@@ -91,7 +91,7 @@ var main = function(corr, label_col, label_row){
 
   var scale = d3.scale.linear()
       .domain([0, d3.min([50, d3.max([label_col.length, label_row.length, 4])])])
-      .range([0, 600]);
+      .range([0, d3.select("input#zoom")[0].value * 600]);
 
   d3.select("input#zoom").on("change", function() {
     scale = d3.scale.linear()
@@ -176,8 +176,8 @@ var main = function(corr, label_col, label_row){
           .attr('font-size', scale(0.8))
           .text(function(d){ return d; })
           .on('mouseover', function(d, i){tick_mouseover(d, i, row[i], label_col);})
-          .on('mouseout', function(d){mouseout(d);})
-          .on('click', function(d, i){reorder_matrix(i, 'row');});
+          .on('mouseout', function(d){mouseout(d);});
+          // .on('click', function(d, i){reorder_matrix(i, 'row');});
 
   var pixel_mouseover = function(d){
     tooltip.style("opacity", 0.8)
