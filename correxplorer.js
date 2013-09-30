@@ -145,8 +145,8 @@ var main = function(corr, label_col, label_row){
           .attr('height', scale(0.9))
           .style('fill',function(d){ return color(d.val);})
           .on('mouseover', function(d){pixel_mouseover(d);})
-          .on('mouseout', function(d){mouseout(d);})
-          .on('click', function(d){reorder_matrix(d.i, 'col'); reorder_matrix(d.j, 'row');});
+          .on('mouseout', function(d){mouseout(d);});
+          // .on('click', function(d){reorder_matrix(d.i, 'col'); reorder_matrix(d.j, 'row');});
           //the last thing works only for symmetric matrices, but with asymmetric sorting
 
   tick_col = svg.append('g')
@@ -179,8 +179,8 @@ var main = function(corr, label_col, label_row){
           .attr('font-size', scale(0.8))
           .text(function(d){ return d; })
           .on('mouseover', function(d, i){tick_mouseover(d, i, row[i], label_col);})
-          .on('mouseout', function(d){mouseout(d);});
-          // .on('click', function(d, i){reorder_matrix(i, 'row');});
+          .on('mouseout', function(d){mouseout(d);})
+          .on('click', function(d, i){reorder_matrix(i, 'row');});
 
   var pixel_mouseover = function(d){
     tooltip.style("opacity", 0.8)
