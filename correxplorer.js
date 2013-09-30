@@ -128,9 +128,12 @@ var main = function(corr, label_col, label_row){
 
   });
 
+  var label_space = 225;
+  // I will make it also a function of scale and max label length
+
   var matrix = svg.append('g')
       .attr('class','matrix')
-      .attr('transform', 'translate(150,150)');
+      .attr('transform', 'translate(' + (label_space + 10) + ',' + (label_space + 10) + ')');
 
   var pixel = matrix.selectAll('rect.pixel').data(corr_data);
 
@@ -148,7 +151,7 @@ var main = function(corr, label_col, label_row){
 
   tick_col = svg.append('g')
       .attr('class','ticks')
-      .attr('transform', 'translate(150, 140)')
+      .attr('transform', 'translate(' + (label_space + 10) + ',' + (label_space) + ')')
       .selectAll('text.tick')
       .data(label_col);
 
@@ -165,7 +168,7 @@ var main = function(corr, label_col, label_row){
 
   tick_row = svg.append('g')
       .attr('class','ticks')
-      .attr('transform', 'translate(140, 150)')
+      .attr('transform', 'translate(' + (label_space) + ',' + (label_space + 10) + ')')
       .selectAll('text.tick')
       .data(label_row);
 
