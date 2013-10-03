@@ -1,6 +1,10 @@
 An interactive way to explore 2d arrays
 (especially for correlations and coincidences).
 
+[Click here to open it!](http://compassinc.github.io/correlation-explorer/)
+
+# Intro
+
 You can:
 
 * Load any `csv` file with numerical values
@@ -15,7 +19,15 @@ Examples of usage:
 * Looking at projections of variables on principal components.
 * Discovering dependencies between two sets of variables (e.g. countries vs diseases).
 
-`[a picture here]`
+![Correlation Explorer - Screenshot](screenshot.png)
+
+# License 
+
+[CC-BY](http://creativecommons.org/licenses/by/3.0/)
+[Piotr Migdał](http://migdal.wikidot.com/)
+at [Compass Inc](https://www.startupcompass.co/).
+
+# Loose notes
 
 ## To do
 
