@@ -29,6 +29,9 @@ window.onload=function(){
       }
     });
   };
+  
+  load_all();  // not to start with nothing
+
 };
 
 var main = function(corr, label_col, label_row){
