@@ -3,6 +3,8 @@ An interactive way to explore 2d arrays
 
 [Click here to open it!](http://compassinc.github.io/correlation-explorer/)
 
+![Correlation Explorer - Screenshot](screenshot.png)
+
 # Intro
 
 You can:
@@ -18,8 +20,6 @@ Examples of usage:
 * Exploring correlation matrix.
 * Looking at projections of variables on principal components.
 * Discovering dependencies between two sets of variables (e.g. countries vs diseases).
-
-![Correlation Explorer - Screenshot](screenshot.png)
 
 # License 
 
